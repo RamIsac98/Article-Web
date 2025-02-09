@@ -1,0 +1,330 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oswald", serif;
+}
+
+/*ajuste de todos los div en general*/
+.contenedor {
+    padding: 60px 0px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*ajuste de todos los h2 en general*/
+.titulo {
+    color: blue;
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/*header*/
+
+header {
+
+    width: 100%;
+    height: 600px;
+    background: #0f0c29;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(240, 27%, 19%, 0.607), #302b63, hsla(246, 55%, 10%, 0.63)), url(img/portada.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, hsla(246, 57%, 10%, 0.324)), url(img/portada.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* edicion del nav*/
+nav {
+    text-align: left;
+    padding: 30px 0px 0px 50px;
+
+    & ul {
+        list-style: none;
+        display: inline-flex;
+    }
+
+    & a {
+        color: #fff;
+        font-weight: 300;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+}
+
+header .contenedor-texto-header {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    & h1 {
+        font-size: 50px;
+        color: white;
+    }
+
+    & h2 {
+        font-size: 30px;
+        font-weight: 300;
+        color: white;
+    }
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.contenedor-contenido {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*edicion de resumen semanal*/
+.img-section,
+.contenedor-texto {
+    width: 48%;
+
+    & h3 {
+        margin-bottom: 15px;
+
+        & span {
+            background: #49BCE6;
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 2px;
+            box-shadow: 0px 0px 6px 0px rgb(0, 0, 0, 0.5);
+            margin-right: 4.5px;
+        }
+    }
+
+    & p {
+        padding: 0px 0px 0px 15px;
+        font-size: 300;
+        text-align: justify;
+    }
+}
+
+.contenedor-novedades {
+    background: rgb(208, 208, 245);
+
+    & h2 {
+        color: white;
+    }
+}
+
+
+/*edicion del contenido*/
+.contenido-img {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/*tamanio de y ajustes de articulos*/
+.articulo-img {
+    width: 24%;
+    margin-bottom: 10px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px 0px rgb(0, 0, 0, 0.5);
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+/*edicion del hover*/
+.hover-contenido {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsl(255, 90%, 40%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 50%;
+        height: 50%;
+    }
+
+    & a {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+.articulo-img:hover .hover-contenido {
+    transform: scale(1);
+}
+
+/*edicion de articulos*/
+.contenido-novedades {
+    background: rgb(52, 173, 201);
+
+
+}
+
+.contenido-articulo {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    & .contenido-n1 {
+        width: 100%;
+        display: inline-flex;
+        margin-top: 30px;
+
+        & img {
+            width: 48%;
+            border-radius: 5%;
+            box-shadow: 0px 0px 6px 0px rgb(0, 0, 0, 0.5);
+        }
+
+
+        & .contenido-n1-texto {
+            display: flex;
+            flex-direction: column;
+
+            & h3 {
+                margin-left: 25px;
+                font-size: 30px;
+                color: whitesmoke;
+
+            }
+
+            & p {
+                width: 100%;
+                margin: 15px 0px 0px 25px;
+                font-weight: 300;
+            }
+        }
+
+    }
+}
+
+/*edicion del segundo wave*/
+.wave-2,
+.wave-3 {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+
+
+}
+
+
+
+/*edicion de autor*/
+
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+
+    & .card {
+        background: #4d0686;
+        display: flex;
+        width: 46%;
+        height: 200px;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 5px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+
+        & img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            display: block;
+        }
+
+        & .contenido-texto-card {
+            width: 60%;
+            color: #fff;
+
+            & p {
+                font-weight: 300;
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+/*footer*/
+
+footer {
+    background: #0f0c29;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid white;
+
+    & .contenido-foo {
+        text-align: center;
+
+        & h4 {
+
+            color: white;
+            border-bottom: 3px solid #af20d3;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        & p {
+            color: white;
+        }
+    }
+
+}
+
+
+.titulo-final {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
